@@ -1,6 +1,7 @@
 {
-  "name": "graph_qa",
+  "name": "graphqa",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -9,7 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@apollo/server": "^5.2.0",
     "graphql": "^16.12.0"

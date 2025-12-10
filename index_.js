@@ -9,8 +9,8 @@ await mongoose.connect("mongodb://localhost:27017/movies_db", {
 
 console.log("MongoDB connected")
 
-import { typeDefs } from "./schema.js";
-import { resolvers } from "./resolver.js";
+import { typeDefs } from "./schema_.js";
+import { resolvers } from "./resolver_.js";
  
 const server = new ApolloServer({
   typeDefs,
