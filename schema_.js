@@ -1,32 +1,35 @@
-export const typeDefs = `#graphql
+import { gql } from "graphql-tag";
+////import { gql } from "@apollo/server";
 
-type Movie {
+export const typeDefs = gql`
+  type Movie {
     id: ID!
-    title: String!
-    filme: Boolean!
-    year:Int!
+    title: String
+    filmed: Boolean
+    year: Int
     rating: Float
     author: Author
-}
+  }
 
-type Author {
-    id: ID
+  type Author {
+    id: ID!
     name: String
-    age: Int!
-    movies: [Movie!]!
-}
+    age: Int
+    movies: [Movie]
+  }
 
-type Query {
-    movies: [Movie!]!
-    authors: [Author!]!
-    movie (id: ID!): Movie
-    author (id: ID!): Author
-    moviesByYear(year: Int!): [Movie!]!
-    topRatedMovies(minRating: Float!): [Movie!]!
-}
+  type Query {
+    movies: [Movie]
+    movie(id: ID!): Movie
+    moviesByYear(year: Int!): [Movie]
+    topRatedMovies(minRating: Float!): [Movie]
+    authors: [Author]
+    author(id: ID!): Author
+  }
 
-type Mutation {
-    addMovie(title: String!, filmed: Boolean!, year:Int!, rating: Float, authorId: ID): Movie
-    deleteMovie(id: ID!): Boolean
-    updateMovie(id: ID!, title: String!, filmed: Boolean!, year: Int!,rating: Float, authorId: ID ): Movie
-}`
+  type Mutation {
+    addMovie(title: String, filmed: Boolean, year: Int, rating: Float, authorId: ID!): Movie
+    deletMovies(id: ID!): Boolean
+    updateMovie(id: ID!, title: String, filmed: Boolean, year: Int, rating: Float, authorId: ID): Movie
+  }
+`;

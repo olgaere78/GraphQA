@@ -1,7 +1,7 @@
 {
   "name": "graphqa",
   "version": "1.0.0",
-  "description": "",
+  "description": "```bash npm init -y npm install @apollo/server graphql ```",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,6 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^5.2.0",
-    "graphql": "^16.12.0"
-  }
+    "graphql": "^16.12.0",
+    "graphql-tag": "^2.12.6",
+    "mongoose": "^9.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgaere78/GraphQA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olgaere78/GraphQA/issues"
+  },
+  "homepage": "https://github.com/olgaere78/GraphQA#readme"
 }
